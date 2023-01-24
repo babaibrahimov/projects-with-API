@@ -1,0 +1,161 @@
+/* POPPINS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(to left, #fcc260, #11deaf, #f8537d, #40a9c8);
+}
+
+.flag-area
+{
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    padding: 10px 0px;
+}
+
+.flag-area img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main-area
+{
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    background: #bfbfbf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    background: linear-gradient(135deg, #07da85, #ac71d0);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+
+.main-area .wrapper
+{
+    max-width: 600px;
+    width: 100%;
+    /* max-height: 300px; */
+    padding: 30px;
+    border-radius: 20px;
+    background: #fff;
+    position: relative;
+    transform: translateY(10px);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.search-area
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-area input
+{
+    width: 70%;
+    padding: 3px 8px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #7410f3;
+    font-size: 1rem;
+    /* border-radius: 20px; */
+    letter-spacing: 1.2px;
+}
+
+
+.search-area button
+{
+    padding: 3px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid #7410f3;
+    background: #a46fe9;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.search-area button:hover
+{
+    background: #7410f3;
+    transition: .5s;
+    letter-spacing: 1.2px;
+}
+
+.wrapper .information-area
+{
+    margin-top: 20px;
+    /* font-size: 1.2rem; */
+}
+
+.capital, .continent, .population, .currency, .language
+{
+    /* background: red; */
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.capital
+{
+    margin-top: 50px;
+}
+
+.wrapper .information-area span
+{
+    font-weight: 400;
+}
+
+.country
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.notice
+{
+    display: none;
+    position: absolute;
+    background: #e4b6ba;
+    color: #721c24;
+    z-index: 10000;
+    padding: 10px 12px;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.notice.active
+{
+    display: block;
+}
+
