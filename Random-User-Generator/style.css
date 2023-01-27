@@ -1,0 +1,113 @@
+/* POPPINS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    width: 100%;
+    min-height: 100vh;
+    background: #7410f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.user-box
+{
+    max-width: 400px;
+    width: 100%;
+    border-radius: 5px;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.user-box .user-image
+{
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    border: 6px solid #7410f3;
+    overflow: hidden;
+}
+
+.user-box .user-image img
+{
+    width: 100%;
+}
+
+.user-information h3
+{
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+
+.user-information h5
+{
+    /* font-style: italic; */
+    font-size: 1rem;
+    margin-top: -5px;
+    color: gray;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+.user-information p
+{
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.user-information i
+{
+    color: #7410f3;
+}
+
+.get-user
+{
+    margin-top: 50px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.get-user .getUser
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #7410f3;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #fff;
+}
+
+.get-user .getUser:hover
+{
+    background: #bfbfbf;
+}
+
+@media (max-width: 430px)
+{
+    body
+    {
+        padding: 0px 15px;
+    }
+}
