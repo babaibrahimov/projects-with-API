@@ -1,0 +1,98 @@
+/* POPPINS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.wrapper
+{
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.meme-box
+{
+    max-width: 70%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.meme-box img
+{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn
+{
+    display: block;
+    max-width: 70%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 8px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 5px;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    color: #fff;
+    transition: .3s;
+    margin-top: 20px;
+}
+
+.btn:hover
+{
+    background: #ff5858;
+    background: linear-gradient(135deg, #ff5858, #f09819);
+}
+
+.name
+{
+    font-size: .9rem;
+    font-weight: 300;
+    color: #737373;
+}
+
+@media (max-width: 530px)
+{
+    body
+    {
+        padding: 20px;
+    }
+    .wrapper
+    {
+        padding: 30px 10px;
+    }
+    .meme-box, .btn
+    {
+        max-width: 90%;
+    }
+}
