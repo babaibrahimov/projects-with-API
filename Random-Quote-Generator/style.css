@@ -1,0 +1,101 @@
+/* POPPINS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+body
+{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(307deg, #88d75f, #28e066);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.wrapper
+{
+    max-width: 700px;
+    width: 100%;
+    padding: 40px 20px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    position: relative;
+}
+
+.quote-box
+{
+    position: relative;
+}
+
+.first
+{
+    position: absolute;
+    top: -25px;
+    left: -10px;
+}
+
+.second
+{
+    position: absolute;
+    right: -5px;
+    bottom: -45px;
+}
+
+span
+{
+    font-size: 44px;
+    font-weight: 900;
+}
+
+.author
+{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.btn
+{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 8px 12px;
+    font-size: .9rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: #28e066;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.btn:hover
+{
+    background: linear-gradient(307deg, #88d75f, #28e066);
+    background: #37eb73;
+}
+
+
+@media (max-width: 730px)
+{
+    body
+    {
+        padding: 0px 20px;
+    }
+}
