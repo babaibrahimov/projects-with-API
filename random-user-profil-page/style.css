@@ -1,0 +1,265 @@
+/* POPPINS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px 60px;
+    /* background: rgb(218, 215, 215); */
+    background: linear-gradient(95deg, #0fcb82, #5ecade);
+
+}
+
+.container
+{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    padding-left: 0px;
+    border-radius: 12px;
+    /* background: linear-gradient(104deg, #0fcb82, #c2d7fc); */
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.profile
+{
+    max-width: 30%;
+    width: 100%;
+    min-height: 90vh;
+    border-radius: 8px;
+    padding: 30px 10px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(104deg, #0fcb82, #c2d7fc);
+    /* background: linear-gradient(208deg, #4376b4, #29c5e9); */
+    /* background: #29c5e9; */
+}
+
+.profile .name
+{
+    margin-top: 10px;
+    line-height: 15px;
+}
+
+.profile .username
+{
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 500;
+    color: #272727;
+    cursor: pointer;
+}
+
+.profile .job
+{
+    margin-top: 20px;
+}
+
+.profile .mail
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.profile .mail i, .profile .location i
+{
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
+
+.profile .location
+{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.imgBx
+{
+    max-width: 240px;
+    width: 100%;
+    max-height: 240px;
+    height: 100%;
+    background: #fff;
+    border-radius: 100%;
+    /* border: 1px solid #333; */
+}
+
+.imgBx img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+
+/* /////////////////////////////////////////////////////////// */
+
+.main-area
+{
+    max-width: 70%;
+    width: 100%;
+    padding: 20px 15px;
+    position: relative;
+    /* background: red; */
+    min-height: 90vh;
+    max-height: 90vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-area::-webkit-scrollbar
+{
+    width: 1px;
+}
+
+.main-area input, .main-area label
+{
+    display: block;
+}
+#show-hide-password
+{
+    position: absolute;
+    top: 0px;
+    right: 45px;
+    height: 100%;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #0fcb82;
+}
+
+.user-box, 
+.fullname-box, 
+.email-box, 
+.gender-box,
+.password-box,
+.phone-box,
+.birth-date-box,
+.zipcode-box,
+.country-box,
+.state-box,
+.city-box,
+.street-box,
+.cardnumber-box
+{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.user-label, 
+.fullname-label, 
+.email-label, 
+.gender-label,
+.password-label,
+.phone-label,
+.birth-date-label,
+.zipcode-label,
+.country-label,
+.state-label,
+.city-label,
+.street-label,
+.cardnumber-label
+{
+    margin-left: 2px;
+    font-size: 1.1rem;
+}
+
+
+#user-edit, 
+#fullname-edit, 
+#email-edit, 
+#gender-edit,
+#password-edit,
+#phone-edit,
+#birth-date-edit,
+#zipcode-edit,
+#country-edit,
+#state-edit,
+#city-edit,
+#street-edit,
+#cardnumber-edit
+
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 500;
+    /* color: #a851d9; */
+    color: #0fcb82;
+}
+
+.user-input, 
+.fullname-input, 
+.email-input, 
+.gender-input,
+.password-input,
+.phone-input,
+.birth-date-input,
+.zipcode-input,
+.country-input,
+.state-input,
+.city-input,
+.street-input,
+.cardnumber-input
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 10px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    background: #e9e7e7;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+}
+
