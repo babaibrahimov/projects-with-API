@@ -261,5 +261,7 @@ body
     width: 100%;
     border-radius: 5px;
     position: relative;
+    border: 2px solid transparent;
+    cursor: default;
 }
 
