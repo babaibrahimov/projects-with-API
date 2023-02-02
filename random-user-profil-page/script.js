@@ -233,7 +233,7 @@ birthDateBtn.addEventListener('click', () => {
 
 //show location in the profil box
 let locationshow = document.querySelector('.location p');
-locationshow.innerHTML = countryInput.value + "," + cityInput.value;
+locationshow.innerHTML = cityInput.value + "," + countryInput.value;
 
 countryBtn.addEventListener('click', () => {
     if(countryedit) {
@@ -255,7 +255,7 @@ countryBtn.addEventListener('click', () => {
         //update country with new country
         countryInput.value == countryInput;
         //show new location in the profile box
-        locationshow.innerHTML = countryInput.value + "," + cityInput.value;
+        locationshow.innerHTML = cityInput.value + "," + countryInput.value;
     }
 });
 
@@ -301,7 +301,7 @@ cityBtn.addEventListener('click', () => {
         //update city with new city
         cityInput.value == cityInput;
         //show new location in profile box
-        locationshow.innerHTML = countryInput.value + "," + cityInput.value;
+        locationshow.innerHTML = cityInput.value + "," + countryInput.value;
     }
 });
 
@@ -370,3 +370,17 @@ cardnumberBtn.addEventListener('click', () => {
         genderInput.value == genderInput;
     }
 });
+
+let toggleBtn = document.querySelector('#toggle');
+let toggleBox = document.querySelector('.toggle');
+let profileBox = document.querySelector('.profile');
+let imgBx = document.querySelector('.imgBx');
+let textBox = document.querySelector('.text-box');
+
+toggleBtn.addEventListener('click', () => {
+    profileBox.classList.toggle('active');
+    toggleBtn.classList.toggle('ri-close-line');
+    toggleBox.classList.toggle('active');
+    imgBx.classList.toggle('active');
+    textBox.classList.toggle('active');
+})

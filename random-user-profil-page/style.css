@@ -29,7 +29,7 @@ body
 {
     width: 100%;
     min-height: 100vh;
-    position: relative;
+    /* position: relative; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -105,8 +105,8 @@ body
     align-items: center;
     justify-content: center;
     width: 100%;
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: .9rem;
+    font-weight: 600;
 }
 
 .imgBx
@@ -265,3 +265,96 @@ body
     cursor: default;
 }
 
+/* /////////////////////////////////////////////////////// */
+/* RESPONSIVILITY */
+
+.toggle{display: none;}
+
+.profile.active
+{
+    max-width: 350px;
+    width: 100%;
+}
+.profile .imgBx.active
+{
+    display: block;
+}
+
+.profile .text-box.active
+{
+    display: block;
+}
+
+.toggle.active
+{
+        top: 15px;
+        left: 5px;
+        height: 20px;
+        width: 20px;
+        border: none;
+        font-size: 1.2rem;
+        font-weight: 600;
+}
+
+@media (max-width: 1090px)
+{
+    .profile
+    {
+        max-width: 350px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 850px)
+{
+    .profile
+    {
+        padding: 30px 5px;
+        position: fixed;
+        /* opacity: .3; */
+        max-width: 10%;
+        width: 100%;
+        overflow: hidden;
+        right: 10px;
+        transition: .5s;
+    }
+    .container
+    {
+        position: fixed;
+        border-radius: 0px;
+    }
+    .main-area
+    {
+        max-width: 90%;
+        width: 100%;
+    }
+    .imgBx
+    {
+        max-width: 200px;
+        width: 100%;
+        max-height: 200px;
+        height: 100%;
+        display: none;
+    }
+    .profile .text-box
+    {
+        display: none;
+    }
+    .toggle
+    {
+        position: absolute;
+        transform: translateX(50%);
+        top: 20px;
+        right: 50%;
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        border: 3px solid #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #333;
+    }
+}
