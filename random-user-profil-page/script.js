@@ -56,6 +56,10 @@ let streetedit = true;
 let zipcodeedit = true;
 let cardnumberedit = true;
 
+//show username in the profile box
+let usernameshow = document.querySelector('.username');
+usernameshow.innerHTML = userInput.value;
+
 userBtn.addEventListener('click', () => {
     if(useredit) {
         userInput.readOnly = false;
@@ -73,6 +77,9 @@ userBtn.addEventListener('click', () => {
         userBtn.classList.add('ri-pencil-line');
         userInput.style.background = "#e9e7e7"
         useredit = true
+        //update username with new username
+        userInput.value == userInput;
+        usernameshow.innerHTML = userInput.value;
     }
 });
 
@@ -97,8 +104,14 @@ passwordBtn.addEventListener('click', () => {
         passwordInput.style.background = "#e9e7e7"
         showHideBtn.style.display = "flex"
         passwordedit = true
+        //update password with new password
+        passwordInput.value == passwordInput;
     }  
 });
+
+//show fullname in the profile box
+let fullnameshow = document.querySelector('.name');
+fullnameshow.innerHTML = fullnameInput.value;
 
 fullnameBtn.addEventListener('click', () => {
     if(fullnameedit) {
@@ -117,8 +130,16 @@ fullnameBtn.addEventListener('click', () => {
         fullnameBtn.classList.add('ri-pencil-line');
         fullnameInput.style.background = "#e9e7e7"
         fullnameedit = true
+        //update fullname with new fullname
+        fullnameInput.value ==fullnameInput;
+        //show new fullname in the profile box
+        fullnameshow.innerHTML = fullnameInput.value;
     } 
 });
+
+//show email in the profil box
+let emailshow = document.querySelector('.mail p');
+emailshow.innerHTML = emailInput.value;
 
 emailBtn.addEventListener('click', () => {
     if(emailedit) {
@@ -137,6 +158,10 @@ emailBtn.addEventListener('click', () => {
         emailBtn.classList.add('ri-pencil-line');
         emailInput.style.background = "#e9e7e7"
         emailedit = true
+        //update email name with new email
+        emailInput.value == emailInput;
+        //show new email in the profile box
+        emailshow.innerHTML = emailInput.value;
     }
 });
 
@@ -157,6 +182,8 @@ phoneBtn.addEventListener('click', () => {
         phoneBtn.classList.add('ri-pencil-line');
         phoneInput.style.background = "#e9e7e7"
         phoneedit = true
+        //update phone number with new phone number
+        phoneInput.value == phoneInput;
     }
 });
 
@@ -168,7 +195,7 @@ genderBtn.addEventListener('click', () => {
         genderBtn.classList.remove('ri-pencil-line');
         genderBtn.classList.add('ri-save-line')
         genderInput.style.background = "#c2d7fc"
-        genderedit = false
+        genderedit = false;
     } else {
         genderInput.readOnly = true;
         genderInput.style.borderColor = "transparent"
@@ -176,7 +203,9 @@ genderBtn.addEventListener('click', () => {
         genderBtn.classList.remove('ri-save-line')
         genderBtn.classList.add('ri-pencil-line');
         genderInput.style.background = "#e9e7e7"
-        genderedit = true
+        genderedit = true;
+        //update gender with new gender
+        genderInput.value == genderInput;
     }
 });
 
@@ -197,8 +226,14 @@ birthDateBtn.addEventListener('click', () => {
         birthDateBtn.classList.add('ri-pencil-line');
         birthDateInput.style.background = "#e9e7e7"
         birthdateedit = true
+        //update birthdate with new birthdate
+        birthDateInput.value == birthDateInput;
     }
 });
+
+//show location in the profil box
+let locationshow = document.querySelector('.location p');
+locationshow.innerHTML = countryInput.value + "," + cityInput.value;
 
 countryBtn.addEventListener('click', () => {
     if(countryedit) {
@@ -216,7 +251,11 @@ countryBtn.addEventListener('click', () => {
         countryBtn.classList.remove('ri-save-line')
         countryBtn.classList.add('ri-pencil-line');
         countryInput.style.background = "#e9e7e7"
-        countryedit = true
+        countryedit = true;
+        //update country with new country
+        countryInput.value == countryInput;
+        //show new location in the profile box
+        locationshow.innerHTML = countryInput.value + "," + cityInput.value;
     }
 });
 
@@ -236,7 +275,9 @@ stateBtn.addEventListener('click', () => {
         stateBtn.classList.remove('ri-save-line')
         stateBtn.classList.add('ri-pencil-line');
         stateInput.style.background = "#e9e7e7"
-        stateedit = true
+        stateedit = true;
+        //update state with new state
+        stateInput.value == stateInput;
     }
 });
 
@@ -256,7 +297,11 @@ cityBtn.addEventListener('click', () => {
         cityBtn.classList.remove('ri-save-line')
         cityBtn.classList.add('ri-pencil-line');
         cityInput.style.background = "#e9e7e7"
-        cityedit = true
+        cityedit = true;
+        //update city with new city
+        cityInput.value == cityInput;
+        //show new location in profile box
+        locationshow.innerHTML = countryInput.value + "," + cityInput.value;
     }
 });
 
@@ -268,7 +313,7 @@ streetBtn.addEventListener('click', () => {
         streetBtn.classList.remove('ri-pencil-line');
         streetBtn.classList.add('ri-save-line')
         streetInput.style.background = "#c2d7fc"
-        streetedit = false
+        streetedit = false;
     } else {
         streetInput.readOnly = true;
         streetInput.style.borderColor = "transparent"
@@ -276,7 +321,9 @@ streetBtn.addEventListener('click', () => {
         streetBtn.classList.remove('ri-save-line')
         streetBtn.classList.add('ri-pencil-line');
         streetInput.style.background = "#e9e7e7"
-        streetedit = true
+        streetedit = true;
+        //update steet with new street
+        streetInput.value == streetInput;
     }
 });
 
@@ -288,7 +335,7 @@ zipcodeBtn.addEventListener('click', () => {
         zipcodeBtn.classList.remove('ri-pencil-line');
         zipcodeBtn.classList.add('ri-save-line')
         zipcodeInput.style.background = "#c2d7fc"
-        zipcodeedit = false
+        zipcodeedit = false;
     } else {
         zipcodeInput.readOnly = true;
         zipcodeInput.style.borderColor = "transparent"
@@ -296,7 +343,9 @@ zipcodeBtn.addEventListener('click', () => {
         zipcodeBtn.classList.remove('ri-save-line')
         zipcodeBtn.classList.add('ri-pencil-line');
         zipcodeInput.style.background = "#e9e7e7"
-        zipcodeedit = true
+        zipcodeedit = true;
+        //update zipcode with new zipcode
+        zipcodeInput.value == zipcodeInput;
     }
 });
 
@@ -316,6 +365,8 @@ cardnumberBtn.addEventListener('click', () => {
         cardnumberBtn.classList.remove('ri-save-line')
         cardnumberBtn.classList.add('ri-pencil-line');
         cardnumberInput.style.background = "#e9e7e7"
-        cardnumberedit = true
+        cardnumberedit = true;
+        //update cardnumber with new cardnumber
+        genderInput.value == genderInput;
     }
 });
