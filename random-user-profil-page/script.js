@@ -395,3 +395,18 @@ imageEdit.addEventListener('click', () => {
 toggleUploadClose.addEventListener('click', () => {
     uploadBox.classList.remove('active');
 })
+
+function getImagefromUser() {
+
+    var newImage = document.getElementById("uploadnewphoto").files[0];
+
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+    //   document.getElementById("display-image").src = e.target.result;
+      document.querySelector(".imgBx img").src = e.target.result;
+    }
+
+    reader.readAsDataURL(newImage);
+    uploadBox.classList.remove('active')
+}
