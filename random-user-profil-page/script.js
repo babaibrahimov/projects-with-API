@@ -376,6 +376,9 @@ let toggleBox = document.querySelector('.toggle');
 let profileBox = document.querySelector('.profile');
 let imgBx = document.querySelector('.imgBx');
 let textBox = document.querySelector('.text-box');
+let imageEdit = document.querySelector('#image-edit');
+let toggleUploadClose = document.querySelector('#toggle-upload-close')
+let uploadBox = document.querySelector('.uploadnewphoto');
 
 toggleBtn.addEventListener('click', () => {
     profileBox.classList.toggle('active');
@@ -383,4 +386,12 @@ toggleBtn.addEventListener('click', () => {
     toggleBox.classList.toggle('active');
     imgBx.classList.toggle('active');
     textBox.classList.toggle('active');
+})
+
+imageEdit.addEventListener('click', () => {
+    uploadBox.classList.add('active');
+});
+
+toggleUploadClose.addEventListener('click', () => {
+    uploadBox.classList.remove('active');
 })

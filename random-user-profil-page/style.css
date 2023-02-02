@@ -159,6 +159,63 @@ body
     display: flex;
 }
 
+#image-edit:hover
+{
+    background: #333;
+    color: #fff;
+    font-weight: 400;
+}
+
+.uploadnewphoto
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploadnewphoto i
+{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.uploadnewphoto i:hover
+{
+    border-color: #fff;
+}
+
+#uploadnewphoto
+{
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.uploadnewphoto.active
+{
+    display: flex;
+}
 
 /* /////////////////////////////////////////////////////////// */
 
