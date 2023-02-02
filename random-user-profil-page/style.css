@@ -117,6 +117,7 @@ body
     height: 100%;
     background: #fff;
     border-radius: 100%;
+    position: relative;
     /* border: 1px solid #333; */
 }
 
@@ -126,6 +127,36 @@ body
     height: 100%;
     object-fit: cover;
     border-radius: 100%;
+}
+
+#image-edit
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: 300;
+    transition: .5s;
+}
+
+.imgBx:hover img
+{
+    opacity: .4;
+}
+
+.imgBx:hover #image-edit
+{
+    display: flex;
 }
 
 
@@ -356,5 +387,39 @@ body
         font-size: 1.3rem;
         font-weight: 600;
         color: #333;
+    }
+}
+
+@media (max-width: 510px)
+{
+    .toggle
+    {
+        height: 30px;
+        width: 30px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 410px)
+{
+    .profile
+    {
+        max-width: 40px;
+        width: 100%;
+    }
+    /* .profile.active
+    {
+        max-width: 93%;
+        width: 100%;
+        left: 10px;
+    } */
+    .main-area label
+    {
+        font-size: .9rem;
+    }
+    .main-area input
+    {
+        font-size: .8rem;
+        padding: 6px 4px;
     }
 }
