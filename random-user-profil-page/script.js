@@ -58,7 +58,7 @@ let cardnumberedit = true;
 
 //show username in the profile box
 let usernameshow = document.querySelector('.username');
-usernameshow.innerHTML = userInput.value;
+usernameshow.innerHTML = "@" + userInput.value;
 
 userBtn.addEventListener('click', () => {
     if(useredit) {
@@ -69,17 +69,24 @@ userBtn.addEventListener('click', () => {
         userBtn.classList.add('ri-save-line')
         userInput.style.background = "#c2d7fc"
         useredit = false
+        // if (userInput.value === "") {
+        //     alert("Input field cannot be empty")
+        // }
     } else {
-        userInput.readOnly = true;
-        userInput.style.borderColor = "transparent"
-        userInput.style.cursor = "default"
-        userBtn.classList.remove('ri-save-line')
-        userBtn.classList.add('ri-pencil-line');
-        userInput.style.background = "#e9e7e7"
-        useredit = true
-        //update username with new username
-        userInput.value == userInput;
-        usernameshow.innerHTML = userInput.value;
+        if (userInput.value == "") {
+            alert("Input field cannot be empty");
+        } else {
+            userInput.readOnly = true;
+            userInput.style.borderColor = "transparent"
+            userInput.style.cursor = "default"
+            userBtn.classList.remove('ri-save-line')
+            userBtn.classList.add('ri-pencil-line');
+            userInput.style.background = "#e9e7e7"
+            useredit = true
+            //update username with new username
+            userInput.value == userInput;
+            usernameshow.innerHTML ="@" + userInput.value;
+        }
     }
 });
 
@@ -95,17 +102,21 @@ passwordBtn.addEventListener('click', () => {
         showHideBtn.style.display = "none"
         passwordedit = false
     } else {
-        passwordInput.readOnly = true;
-        passwordInput.style.borderColor = "transparent"
-        passwordInput.style.cursor = "default"
-        passwordInput.setAttribute('type', 'password')
-        passwordBtn.classList.remove('ri-save-line')
-        passwordBtn.classList.add('ri-pencil-line');
-        passwordInput.style.background = "#e9e7e7"
-        showHideBtn.style.display = "flex"
-        passwordedit = true
-        //update password with new password
-        passwordInput.value == passwordInput;
+        if (passwordInput.value == "") {
+            alert("Input field cannot be empty");
+        } else {
+            passwordInput.readOnly = true;
+            passwordInput.style.borderColor = "transparent"
+            passwordInput.style.cursor = "default"
+            passwordInput.setAttribute('type', 'password')
+            passwordBtn.classList.remove('ri-save-line')
+            passwordBtn.classList.add('ri-pencil-line');
+            passwordInput.style.background = "#e9e7e7"
+            showHideBtn.style.display = "flex"
+            passwordedit = true
+            //update password with new password
+            passwordInput.value == passwordInput;
+        }
     }  
 });
 
@@ -123,17 +134,21 @@ fullnameBtn.addEventListener('click', () => {
         fullnameInput.style.background = "#c2d7fc"
         fullnameedit = false
     } else {
-        fullnameInput.readOnly = true;
-        fullnameInput.style.borderColor = "transparent"
-        fullnameInput.style.cursor = "default"
-        fullnameBtn.classList.remove('ri-save-line')
-        fullnameBtn.classList.add('ri-pencil-line');
-        fullnameInput.style.background = "#e9e7e7"
-        fullnameedit = true
-        //update fullname with new fullname
-        fullnameInput.value ==fullnameInput;
-        //show new fullname in the profile box
-        fullnameshow.innerHTML = fullnameInput.value;
+        if (fullnameInput.value == "") {
+            alert("Input field cannot be empty");
+        } else {
+            fullnameInput.readOnly = true;
+            fullnameInput.style.borderColor = "transparent"
+            fullnameInput.style.cursor = "default"
+            fullnameBtn.classList.remove('ri-save-line')
+            fullnameBtn.classList.add('ri-pencil-line');
+            fullnameInput.style.background = "#e9e7e7"
+            fullnameedit = true
+            //update fullname with new fullname
+            fullnameInput.value ==fullnameInput;
+            //show new fullname in the profile box
+            fullnameshow.innerHTML = fullnameInput.value;
+        }
     } 
 });
 
@@ -151,17 +166,21 @@ emailBtn.addEventListener('click', () => {
         emailInput.style.background = "#c2d7fc"
         emailedit = false
     } else {
-        emailInput.readOnly = true;
-        emailInput.style.borderColor = "transparent"
-        emailInput.style.cursor = "default"
-        emailBtn.classList.remove('ri-save-line')
-        emailBtn.classList.add('ri-pencil-line');
-        emailInput.style.background = "#e9e7e7"
-        emailedit = true
-        //update email name with new email
-        emailInput.value == emailInput;
-        //show new email in the profile box
-        emailshow.innerHTML = emailInput.value;
+        if (emailInput.value == "") {
+            alert("Input field cannot be empty");
+        } else {
+            emailInput.readOnly = true;
+            emailInput.style.borderColor = "transparent"
+            emailInput.style.cursor = "default"
+            emailBtn.classList.remove('ri-save-line')
+            emailBtn.classList.add('ri-pencil-line');
+            emailInput.style.background = "#e9e7e7"
+            emailedit = true
+            //update email name with new email
+            emailInput.value == emailInput;
+            //show new email in the profile box
+            emailshow.innerHTML = emailInput.value;
+        }
     }
 });
 
@@ -174,16 +193,20 @@ phoneBtn.addEventListener('click', () => {
         phoneBtn.classList.add('ri-save-line')
         phoneInput.style.background = "#c2d7fc"
         phoneedit = false
-    } else {
-        phoneInput.readOnly = true;
-        phoneInput.style.borderColor = "transparent"
-        phoneInput.style.cursor = "default"
-        phoneBtn.classList.remove('ri-save-line')
-        phoneBtn.classList.add('ri-pencil-line');
-        phoneInput.style.background = "#e9e7e7"
-        phoneedit = true
-        //update phone number with new phone number
-        phoneInput.value == phoneInput;
+    } else {        
+        if (phoneInput.value == "") {
+            alert("Input field cannot be empty");
+        } else {
+            phoneInput.readOnly = true;
+            phoneInput.style.borderColor = "transparent"
+            phoneInput.style.cursor = "default"
+            phoneBtn.classList.remove('ri-save-line')
+            phoneBtn.classList.add('ri-pencil-line');
+            phoneInput.style.background = "#e9e7e7"
+            phoneedit = true
+            //update phone number with new phone number
+            phoneInput.value == phoneInput;
+        }
     }
 });
 
@@ -197,15 +220,19 @@ genderBtn.addEventListener('click', () => {
         genderInput.style.background = "#c2d7fc"
         genderedit = false;
     } else {
-        genderInput.readOnly = true;
-        genderInput.style.borderColor = "transparent"
-        genderInput.style.cursor = "default"
-        genderBtn.classList.remove('ri-save-line')
-        genderBtn.classList.add('ri-pencil-line');
-        genderInput.style.background = "#e9e7e7"
-        genderedit = true;
-        //update gender with new gender
-        genderInput.value == genderInput;
+        if (genderInput.value == "") {
+            alert("Input field cannot be empty");
+        } else {
+            genderInput.readOnly = true;
+            genderInput.style.borderColor = "transparent"
+            genderInput.style.cursor = "default"
+            genderBtn.classList.remove('ri-save-line')
+            genderBtn.classList.add('ri-pencil-line');
+            genderInput.style.background = "#e9e7e7"
+            genderedit = true;
+            //update gender with new gender
+            genderInput.value == genderInput;
+        }
     }
 });
 
@@ -219,15 +246,19 @@ birthDateBtn.addEventListener('click', () => {
         birthDateInput.style.background = "#c2d7fc"
         birthdateedit = false
     } else {
-        birthDateInput.readOnly = true;
-        birthDateInput.style.borderColor = "transparent"
-        birthDateInput.style.cursor = "default"
-        birthDateBtn.classList.remove('ri-save-line')
-        birthDateBtn.classList.add('ri-pencil-line');
-        birthDateInput.style.background = "#e9e7e7"
-        birthdateedit = true
-        //update birthdate with new birthdate
-        birthDateInput.value == birthDateInput;
+        if (birthDateInput.value == "") {
+            alert("Input field cannot be empty");
+        } else {
+            birthDateInput.readOnly = true;
+            birthDateInput.style.borderColor = "transparent"
+            birthDateInput.style.cursor = "default"
+            birthDateBtn.classList.remove('ri-save-line')
+            birthDateBtn.classList.add('ri-pencil-line');
+            birthDateInput.style.background = "#e9e7e7"
+            birthdateedit = true
+            //update birthdate with new birthdate
+            birthDateInput.value == birthDateInput;
+        }
     }
 });
 
@@ -245,17 +276,21 @@ countryBtn.addEventListener('click', () => {
         countryInput.style.background = "#c2d7fc"
         countryedit = false
     } else {
-        countryInput.readOnly = true;
-        countryInput.style.borderColor = "transparent"
-        countryInput.style.cursor = "default"
-        countryBtn.classList.remove('ri-save-line')
-        countryBtn.classList.add('ri-pencil-line');
-        countryInput.style.background = "#e9e7e7"
-        countryedit = true;
-        //update country with new country
-        countryInput.value == countryInput;
-        //show new location in the profile box
-        locationshow.innerHTML = cityInput.value + "," + countryInput.value;
+        if (countryInput.value == "") {
+            alert("Input field cannot be empty");
+        } else {
+            countryInput.readOnly = true;
+            countryInput.style.borderColor = "transparent"
+            countryInput.style.cursor = "default"
+            countryBtn.classList.remove('ri-save-line')
+            countryBtn.classList.add('ri-pencil-line');
+            countryInput.style.background = "#e9e7e7"
+            countryedit = true;
+            //update country with new country
+            countryInput.value == countryInput;
+            //show new location in the profile box
+            locationshow.innerHTML = cityInput.value + "," + countryInput.value;
+        }
     }
 });
 
@@ -269,15 +304,19 @@ stateBtn.addEventListener('click', () => {
         stateInput.style.background = "#c2d7fc"
         stateedit = false
     } else {
-        stateInput.readOnly = true;
-        stateInput.style.borderColor = "transparent"
-        stateInput.style.cursor = "default"
-        stateBtn.classList.remove('ri-save-line')
-        stateBtn.classList.add('ri-pencil-line');
-        stateInput.style.background = "#e9e7e7"
-        stateedit = true;
-        //update state with new state
-        stateInput.value == stateInput;
+        if (stateInput.value == "") {
+            alert("Input field cannot be empty");
+        } else {
+            stateInput.readOnly = true;
+            stateInput.style.borderColor = "transparent"
+            stateInput.style.cursor = "default"
+            stateBtn.classList.remove('ri-save-line')
+            stateBtn.classList.add('ri-pencil-line');
+            stateInput.style.background = "#e9e7e7"
+            stateedit = true;
+            //update state with new state
+            stateInput.value == stateInput;
+        }
     }
 });
 
@@ -291,17 +330,21 @@ cityBtn.addEventListener('click', () => {
         cityInput.style.background = "#c2d7fc"
         cityedit = false
     } else {
-        cityInput.readOnly = true;
-        cityInput.style.borderColor = "transparent"
-        cityInput.style.cursor = "default"
-        cityBtn.classList.remove('ri-save-line')
-        cityBtn.classList.add('ri-pencil-line');
-        cityInput.style.background = "#e9e7e7"
-        cityedit = true;
-        //update city with new city
-        cityInput.value == cityInput;
-        //show new location in profile box
-        locationshow.innerHTML = cityInput.value + "," + countryInput.value;
+        if (cityInput.value == "") {
+            alert("Input field cannot be empty");
+        } else {
+            cityInput.readOnly = true;
+            cityInput.style.borderColor = "transparent"
+            cityInput.style.cursor = "default"
+            cityBtn.classList.remove('ri-save-line')
+            cityBtn.classList.add('ri-pencil-line');
+            cityInput.style.background = "#e9e7e7"
+            cityedit = true;
+            //update city with new city
+            cityInput.value == cityInput;
+            //show new location in profile box
+            locationshow.innerHTML = cityInput.value + "," + countryInput.value;
+        }
     }
 });
 
@@ -315,15 +358,19 @@ streetBtn.addEventListener('click', () => {
         streetInput.style.background = "#c2d7fc"
         streetedit = false;
     } else {
-        streetInput.readOnly = true;
-        streetInput.style.borderColor = "transparent"
-        streetInput.style.cursor = "default"
-        streetBtn.classList.remove('ri-save-line')
-        streetBtn.classList.add('ri-pencil-line');
-        streetInput.style.background = "#e9e7e7"
-        streetedit = true;
-        //update steet with new street
-        streetInput.value == streetInput;
+        if (streetInput.value == "") {
+            alert("Input field cannot be empty");
+        } else {
+            streetInput.readOnly = true;
+            streetInput.style.borderColor = "transparent"
+            streetInput.style.cursor = "default"
+            streetBtn.classList.remove('ri-save-line')
+            streetBtn.classList.add('ri-pencil-line');
+            streetInput.style.background = "#e9e7e7"
+            streetedit = true;
+            //update steet with new street
+            streetInput.value == streetInput;
+        }
     }
 });
 
@@ -337,15 +384,19 @@ zipcodeBtn.addEventListener('click', () => {
         zipcodeInput.style.background = "#c2d7fc"
         zipcodeedit = false;
     } else {
-        zipcodeInput.readOnly = true;
-        zipcodeInput.style.borderColor = "transparent"
-        zipcodeInput.style.cursor = "default"
-        zipcodeBtn.classList.remove('ri-save-line')
-        zipcodeBtn.classList.add('ri-pencil-line');
-        zipcodeInput.style.background = "#e9e7e7"
-        zipcodeedit = true;
-        //update zipcode with new zipcode
-        zipcodeInput.value == zipcodeInput;
+        if (zipcodeInput.value == "") {
+            alert("Input field cannot be empty");
+        } else {
+            zipcodeInput.readOnly = true;
+            zipcodeInput.style.borderColor = "transparent"
+            zipcodeInput.style.cursor = "default"
+            zipcodeBtn.classList.remove('ri-save-line')
+            zipcodeBtn.classList.add('ri-pencil-line');
+            zipcodeInput.style.background = "#e9e7e7"
+            zipcodeedit = true;
+            //update zipcode with new zipcode
+            zipcodeInput.value == zipcodeInput;
+        }
     }
 });
 
@@ -359,15 +410,19 @@ cardnumberBtn.addEventListener('click', () => {
         cardnumberInput.style.background = "#c2d7fc"
         cardnumberedit = false
     } else {
-        cardnumberInput.readOnly = true;
-        cardnumberInput.style.borderColor = "transparent"
-        cardnumberInput.style.cursor = "default"
-        cardnumberBtn.classList.remove('ri-save-line')
-        cardnumberBtn.classList.add('ri-pencil-line');
-        cardnumberInput.style.background = "#e9e7e7"
-        cardnumberedit = true;
-        //update cardnumber with new cardnumber
-        genderInput.value == genderInput;
+        if (cardnumberInput.value == "") {
+            alert("Input field cannot be empty");
+        } else {
+            cardnumberInput.readOnly = true;
+            cardnumberInput.style.borderColor = "transparent"
+            cardnumberInput.style.cursor = "default"
+            cardnumberBtn.classList.remove('ri-save-line')
+            cardnumberBtn.classList.add('ri-pencil-line');
+            cardnumberInput.style.background = "#e9e7e7"
+            cardnumberedit = true;
+            //update cardnumber with new cardnumber
+            genderInput.value == genderInput;
+        }
     }
 });
 
